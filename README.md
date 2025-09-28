@@ -8,7 +8,7 @@ I’m using this repo as a personal Python playground to practice, learn, and gr
 
 ## 📂 Projects
 
-- [Project 1: Quadratic equation solver](./project1_Quadratic equation solver/README.md)
+- [Project 1: Quadratic equation solver](./QEuationSolver/README.md)
 
 
 ---
@@ -16,5 +16,5 @@ I’m using this repo as a personal Python playground to practice, learn, and gr
 ## 🔧 How to Run
 Clone the repo:
 ```bash
-git clone https://github.com/<your-username>/my-python-projects.git
+git clone https://github.com/prakashhh2/my-python-projects.git
 cd my-python-projects
