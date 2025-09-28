@@ -9,7 +9,7 @@ I’m using this repo as a personal Python playground to practice, learn, and gr
 ## 📂 Projects
 
 - [Project 1: Quadratic equation solver](/QEquationSolver/README.md)--
->>>>>>> b93ae04 (Describe what you changed)
+
 
 ## 🔧 How to Run
 Clone the repo:
