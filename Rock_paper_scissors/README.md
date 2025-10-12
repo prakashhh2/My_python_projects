@@ -22,7 +22,7 @@ Built as part of my Python learning journey, this project explores how randomnes
 
 
 Move into the folder:
-cd My_python_projects/GIT_PUSH_GAME
+cd My_python_projects/Rock_paper_scissors
 
 
 Run the Python file:
