@@ -8,7 +8,9 @@ I’m using this repo as a personal Python playground to practice, learn, and gr
 
 ## 📂 Projects
 
-- [Project 1: Quadratic equation solver](/QEquationSolver/README.md)--
+- [Project 1: Quadratic equation solver](/QEquationSolver/README.md)
+-[Projects 2:  Rock Paper Scissors game](/Rock_paper_scissors/README.md)
+
 
 
 ## 🔧 How to Run
@@ -16,3 +18,5 @@ Clone the repo:
 ```bash
 git clone https://github.com/prakashhh2/my-python-projects.git
 cd my-python-projects
+
+
