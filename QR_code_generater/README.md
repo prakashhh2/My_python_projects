@@ -20,3 +20,12 @@ Perfect for quick, no-fuss QR creation — right from your command line!
 Install all dependencies:
 ```bash
 pip install -r requirements.txt
+```
+Installation
+```bash
+git clone https://github.com/prakashhh2/My_python_projects.git
+
+cd QR_code_generater 
+python3 main.py
+```
+
