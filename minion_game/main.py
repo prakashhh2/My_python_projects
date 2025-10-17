@@ -47,7 +47,7 @@ def play_game(player1, player2, word):
 
 def save_scoreboard(player1, player2, word, kevin_score, stuart_score, winner):
     """Save results to a scoreboard file."""
-    with open("scoreboard.txt", "a") as file:
+    with open("MY_PYTHON_PROJECTS/minion_game/scoreboard.txt", "a") as file:
         file.write(f"{player1} vs {player2} | Word: {word} | {player1}: {kevin_score}, {player2}: {stuart_score} | Winner: {winner}\n")
 
 
