@@ -26,4 +26,31 @@ If the given string is `"BANANA"`:
 Instead of generating all substrings (which would be slow), we use an optimized approach:  
 Every letter contributes `(len(string) - index)` possible substrings.  
 
-Example:  
+Example: Word = BANANA
+Length = 6
+
+At index 1 (`A`), Kevin gets `6 - 1 = 5` points.  
+At index 2 (`N`), Stuart gets `6 - 2 = 4` points.  
+And so on...  
+
+This logic gives **O(n)** efficiency — much faster than brute force substring generation!
+
+---
+
+## ⚙️ Tech & Python Concepts Used  
+
+- **String slicing** and **index-based substring calculation**  
+- **Loop optimization (O(n))**  
+- **Conditional logic** for vowel vs consonant scoring  
+- **File handling** (`scoreboard.txt` for game history)  
+- **Terminal color output** using the `colorama` library  
+- **Random word generation** with the `random` and `string` modules  
+
+---
+
+## 🚀 How to Play  
+
+### 🧱 1. Run the Game  
+```bash
+python3 minion_game.py
+
