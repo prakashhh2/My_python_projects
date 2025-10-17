@@ -53,4 +53,10 @@ This logic gives **O(n)** efficiency — much faster than brute force substring 
 ### 🧱 1. Run the Game  
 ```bash
 python3 minion_game.py
+```
+
+## You can see the score after runing the game
+[Scoreboard](/MY_PYTHON_PROJECTS/scoreboard.txt)
+
+
 

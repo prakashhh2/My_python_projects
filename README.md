@@ -14,6 +14,8 @@ I’m using this repo as a personal Python playground to practice, learn, and gr
 
 [Project 3: QR Code generater](/QR_code_generater/README.md)
 
+[Project 4: Minion Game](/minion_game/README.md)
+
 
 
 ## 🔧 How to Run
