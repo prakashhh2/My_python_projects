@@ -11,7 +11,20 @@ FOOD_COLOUR = "#FF0000"
 BACKGROUND_COLOUR = "#000000"
 
 class Snake:
-    pass
+     
+     def __init__(self):
+        self.body_size = BODY_PARTS
+        self.coordinates = []
+        self.squares = []
+
+
+        for i in range (0, BODY_PARTS):
+            self.coordinates.append([0,0])
+
+        for x, y in self.coordinates:
+            squares = canvas.create_rectangle(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill = SNAKE_COLOUR, tag = "snake" )
+            self.squares.append(squares)
+
 
 
 class Food:
@@ -65,7 +78,7 @@ x = int((screen_width / 2) - (window_width / 2))
 y = int((screen_height / 2) - (window_height / 2))
 window.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
-# ✅ pass canvas to Food
+
 snake = Snake()
 food = Food(canvas)
 
