@@ -71,7 +71,14 @@ def next_turn(snake, food):
    
 
 def change_direction(new_direction):
-    pass
+    
+    global direction
+
+    if new_direction == "left":
+        if direction != "right":
+            direction = new_direction
+            
+
 
 
 def game_over():
