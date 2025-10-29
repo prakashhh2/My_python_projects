@@ -16,6 +16,10 @@ I’m using this repo as a personal Python playground to practice, learn, and gr
 
 [Project 4: Minion Game](/minion_game/README.md)
 
+[Project 5: Snake Game](/Snake_game/README.md)
+
+
+
 
 
 ## 🔧 How to Run
