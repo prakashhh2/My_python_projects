@@ -1,5 +1,6 @@
 import random
 
+# Generate a random 4-digit number
 secret = str(random.randint(1111, 9999))
 print("Guess the 4-digit number!")
 
@@ -14,24 +15,25 @@ while True:
         print("🎉 Correct! You guessed the number:", secret)
         break
 
-    # Count correct position
+    # Step 1: Count digits in the correct position
     correct_pos = sum(1 for i in range(4) if guess[i] == secret[i])
 
-    # Count digits that exist in secret (but remove already matched ones)
-    correct_digits = 0
+    # Step 2: Count correct digits ignoring position
+    # Create copies to avoid double counting
     secret_copy = list(secret)
     guess_copy = list(guess)
 
-    # Remove digits already counted as correct position
+    # Remove already matched digits (correct positions)
     for i in range(4):
         if guess_copy[i] == secret_copy[i]:
-            secret_copy[i] = "_"
-            guess_copy[i] = "_"
+            secret_copy[i] = guess_copy[i] = "_"
 
-    # Count correct digits wrong position
+    # Count digits correct but in wrong position
+    correct_digit_wrong_pos = 0
     for digit in guess_copy:
         if digit != "_" and digit in secret_copy:
-            correct_digits += 1
+            correct_digit_wrong_pos += 1
             secret_copy[secret_copy.index(digit)] = "_"
 
-    print(f"Correct position: {correct_pos},  Correct digit wrong position: {correct_digits}")
+    print(f"Digits correct and in correct position: {correct_pos}")
+    print(f"Digits correct but in wrong position: {correct_digit_wrong_pos}")
