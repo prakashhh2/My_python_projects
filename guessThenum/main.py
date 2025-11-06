@@ -12,6 +12,10 @@ root.title("4-Digit Guessing Game")
 root.geometry("350x400")
 root.config(bg= "#1c1c1c")
 
+# Game title
+title = tk.Label(root, text = "Guess the 4 Digit number!", font=("Arial",16, "bold"), bg = "#1c1c1c", fg ="#00ff7f")
+title.pack(pady = 15)
+
 while True:
     guess = input("Enter your guess: ")
 
