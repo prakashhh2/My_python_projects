@@ -27,6 +27,38 @@ result_box = tk.Text(root,height=10, width=35, font=("consolas", 12) )
 result_box.pack(pady= 15)
 result_box.config(state="disabled", bg ="#2a2a2a", fg = "white")
 
+# core game logic
+def check_guess():
+    guess = entry.get().strip()
+
+    if len(guess) != 4 or not guess.isdigit():
+        messagebox.showwarning("Invalid Input", "Please entre Exactly 4 digits.")
+        return
+    global secret
+
+    if guess == secret:
+        messagebox.showinfo("You win!",f"Correct! The number was{secret}")
+        reset_game()
+        return
+    
+    correct_pos = sum(1 for i in range(4) if guess[i] == secret[i])
+
+    # Count correct digits (wrong position)
+    correct_digits = 0
+    secret_copy = list(secret)
+    guess_copy = list(guess)
+
+    for i in range(4):
+        if guess_copy[i] == secret_copy[i]:
+            secret_copy[i] = "_"
+            guess_copy[i] = "_"
+
+    for digit in guess_copy:
+        if digit != "_" and digit in secret_copy:
+            correct_digits += 1
+            secret_copy[secret_copy.index(digit)] = "_"
+    
+
 
 while True:
     guess = input("Enter your guess: ")
