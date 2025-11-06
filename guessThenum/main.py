@@ -16,6 +16,11 @@ root.config(bg= "#1c1c1c")
 title = tk.Label(root, text = "Guess the 4 Digit number!", font=("Arial",16, "bold"), bg = "#1c1c1c", fg ="#00ff7f")
 title.pack(pady = 15)
 
+# Input file
+
+entry = tk.Entry(root, font =("Arial", 14), justify="center")
+entry.pack(pady=10)
+
 while True:
     guess = input("Enter your guess: ")
 
