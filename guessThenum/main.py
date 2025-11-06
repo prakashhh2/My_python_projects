@@ -21,6 +21,13 @@ title.pack(pady = 15)
 entry = tk.Entry(root, font =("Arial", 14), justify="center")
 entry.pack(pady=10)
 
+# Display result box
+
+result_box = tk.Text(root,height=10, width=35, font=("consolas", 12) )
+result_box.pack(pady= 15)
+result_box.config(state="disabled", bg ="#2a2a2a", fg = "white")
+
+
 while True:
     guess = input("Enter your guess: ")
 
