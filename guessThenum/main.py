@@ -57,39 +57,35 @@ def check_guess():
         if digit != "_" and digit in secret_copy:
             correct_digits += 1
             secret_copy[secret_copy.index(digit)] = "_"
+
+     # Show result in text box
+    result_box.config(state="normal")
+    result_box.insert(tk.END, f"Guess: {guess} | Pos: {correct_pos}, Wrong Pos: {correct_digits}\n")
+    result_box.config(state="disabled")
+    result_box.see(tk.END)
+
+    entry.delete(0, tk.END)
+
+def reset_game():
+    global secret
+    secret = str(random.randint(1111, 9999))
+    result_box.config(state="normal")
+    result_box.delete(1.0, tk.END)
+    result_box.insert(tk.END, "New Game Started!\n")
+    result_box.config(state="disabled")
+    entry.delete(0, tk.END)
+
+# Buttons
+btn_frame = tk.Frame(root, bg="#1c1c1c")
+btn_frame.pack(pady=10)
+
+check_btn = tk.Button(btn_frame, text="Check", font=("Arial", 12), bg="#00ff7f", fg="black", width=10, command=check_guess)
+check_btn.grid(row=0, column=0, padx=5)
+
+reset_btn = tk.Button(btn_frame, text="Reset", font=("Arial", 12), bg="#ff4757", fg="white", width=10, command=reset_game)
+reset_btn.grid(row=0, column=1, padx=5)
+
+root.mainloop()
     
 
 
-while True:
-    guess = input("Enter your guess: ")
-
-    if len(guess) != 4 or not guess.isdigit():
-        print("Please enter exactly 4 digits.")
-        continue
-
-    if guess == secret:
-        print("🎉 Correct! You guessed the number:", secret)
-        break
-
-    # Step 1: Count digits in the correct position
-    correct_pos = sum(1 for i in range(4) if guess[i] == secret[i])
-
-    # Step 2: Count correct digits ignoring position
-    # Create copies to avoid double counting
-    secret_copy = list(secret)
-    guess_copy = list(guess)
-
-    # Remove already matched digits (correct positions)
-    for i in range(4):
-        if guess_copy[i] == secret_copy[i]:
-            secret_copy[i] = guess_copy[i] = "_"
-
-    # Count digits correct but in wrong position
-    correct_digit_wrong_pos = 0
-    for digit in guess_copy:
-        if digit != "_" and digit in secret_copy:
-            correct_digit_wrong_pos += 1
-            secret_copy[secret_copy.index(digit)] = "_"
-
-    print(f"Digits correct and in correct position: {correct_pos}")
-    print(f"Digits correct but in wrong position: {correct_digit_wrong_pos}")
