@@ -1,8 +1,16 @@
 import random
+import tkinter as tk
+from tkinter import messagebox
 
 # Generate a random 4-digit number
 secret = str(random.randint(1111, 9999))
 print("Guess the 4-digit number!")
+
+# Create Window
+root = tk.Tk()
+root.title("4-Digit Guessing Game")
+root.geometry("350x400")
+root.config(bg= "#1c1c1c")
 
 while True:
     guess = input("Enter your guess: ")
